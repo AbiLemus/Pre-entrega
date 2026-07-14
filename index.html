@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modo Turista</title>
+<!-- SEO -->
+    <meta name="description" content="Tienda de productos de viaje, accesorios y experiencias para viajeros.">
+    <meta name="keywords" content="viajes, turismo, mochilas, accesorios de viaje">
+    <meta name="author" content="Abigail Lemus">
 
-    <!-- Google Fonts -->
+<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+<!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
+
+
 <body>
 
-    <!-- HEADER -->
+<!-- HEADER -->
     <header>
         <h1>Modo Turista</h1>
 
@@ -22,17 +29,19 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#destinos">Destinos</a></li>
                 <li><a href="#Anecdotas">Anécdotas</a></li>
+                <li><a href="#productos">Productos</a></li>
                 <li><a href="#contacto-form">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- MAIN -->
+<!-- MAIN -->
     <main>
 
         <!-- INICIO -->
         <section id="inicio" class="hero">
             <h2>Viajemos juntos por el mundo</h2>
+            <p>Encuentra todo lo que necesitas para tu próxima aventura</p>
             <p>Descubre nuevos destinos y experiencias increíbles.<br>
             Llenate de tips y reseñas de esta red de viajeros que van por la vida en Modo Turista</p>
         </section>
@@ -94,24 +103,54 @@
                     <h3>Andrea</h3>
                     <p>En Wellington el viento era tan fuerte que casi pierdo mi gorra frente al puerto. <br>Un desconocido la atrapó antes de que volara al agua y seguimos caminando riéndonos como si nos conociéramos de toda la vida.</p>
                 </div>
-
+ 
+                <div class="Anecdotas">
+                    <h3>Joan</h3>
+                    <p>En Montevideo el mejor plan de la tarde es ir a la rambla. <br>Caminar junto al Río de la Plata, disfrutá del atardecer y el ritmo tranquilo de la ciudad.</p>
+                </div>
             </div>
+        </section>
+
+<!-- PRODUCTOS -->
+<section id="productos">
+            <h2>Productos</h2>
+            
+<ul id="lista-productos"></ul>
+
+    <h2>Carrito</h2>
+
+    <ul id="items-carrito"></ul>
+
+    <p>Cantidad: <span id="cantidad-carrito">0</span></p>
+
+    <p>Total: <span id="total-carrito">$0</span></p>
+
+    <button id="btn-vaciar">Vaciar carrito</button>
+    <button id="btn-pagar">Pagar</button>
+
         </section>
 
         </br>
         </br>
-        <!-- CONTACTO -->
+
+<!-- CONTACTO -->
         <section id="contacto-form">
         <h2>Escribimos tu anécdota o tip de viaje</h2>
         </br>
         </br>
         <div class="form">
-        <form > <!-- action="ruta/servidor" method="post" -->
-            <input id="Nombre" type="text" placeholder="Nombre" required>
-            <input id="Email" type="email" placeholder="Email" required>
-            <input id="Telefono" type="tel" placeholder="Teléfono" required>
-            <textarea placeholder="Mensaje" required></textarea>
-            <button type="submit" class="btn"> Enviar Anécdota</button>
+        <form action="https://formspree.io/f/XXXXXXX" method="POST" class="form"> 
+
+        <label>Nombre</label>
+        <input id="nombre" class="form-control" required>
+
+        <label>Email</label>
+        <input id="email" type="email" class="form-control" required>
+
+        <label>Mensaje</label>
+        <textarea placeholder="mensaje" class="form-control" required></textarea>
+
+        <button type="submit" class="btn btn-primary mt-3">Enviar Anécdota</button>
 
         </form>
         </div>
@@ -126,6 +165,13 @@
             abigailemus@gmail.com
         </p>
     </footer>
+
+
+<!-- JAVA SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/productos.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
